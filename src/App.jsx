@@ -27,7 +27,7 @@ const App = () => {
   }, [todos]);
   return (
     <main className=" bg-black min-h-screen text-gray-300">
-      <div className="p-10 space-y-10">
+      <div className="md:p-10 p-5 space-y-10">
         <h1 className="text-4xl font-bold text-blue-300">Todo List</h1>
         <div className="flex flex-col gap-5 md:flex-row md:justify-between items-start">
           <Form handleSubmit={handleSubmit} input={input} setInput={setInput} />
