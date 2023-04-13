@@ -24,7 +24,7 @@ const Todo = ({ id, name, isDone, setTodos, todos }) => {
 
   return (
     <li className="flex justify-between items-center border border-green-300 p-5 rounded-md">
-      <div>
+      <div className="w-[55%] lg:w-[85%] ">
         <input
           type="checkbox"
           id={`todo${id}`}
@@ -34,7 +34,7 @@ const Todo = ({ id, name, isDone, setTodos, todos }) => {
         />
         <label
           htmlFor={`todo${id}`}
-          className={`ml-2 text-lg ${isDone && "line-through"}`}>
+          className={`ml-2 text-lg ${isDone && "line-through text-green-200"}`}>
           {name}
         </label>
       </div>
