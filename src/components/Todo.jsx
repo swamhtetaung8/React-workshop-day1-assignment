@@ -15,9 +15,11 @@ const Todo = ({ id, name, isDone, setTodos, todos }) => {
   const editTodo = (id) => {
     const currTodo = todos.find((todo) => todo.id == id);
     const input = prompt("What do you want to change", currTodo.name);
-    setTodos(
-      todos.map((todo) => (todo.id == id ? { ...todo, name: input } : todo))
-    );
+    if (input.trim().length > 0) {
+      setTodos(
+        todos.map((todo) => (todo.id == id ? { ...todo, name: input } : todo))
+      );
+    }
   };
 
   return (
